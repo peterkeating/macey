@@ -1,0 +1,13 @@
+{{!< default}}
+
+<div class="{{post_class}}">
+    {{#post}}
+
+    <span class="post-meta">{{date format='DD MMM YYYY'}} {{#if tags}}on {{tags separator=" | "}}{{/if}}</span>
+
+    <h1>{{{title}}}</h1>
+
+    {{content}}
+
+    {{/post}}
+</div>
