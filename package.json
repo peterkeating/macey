@@ -1,0 +1,11 @@
+{
+  "name": "macey",
+  "version": "0.0.0",
+  "description": "Theme for [Ghost](https://ghost.org/) blogging platform.",
+  "author": "Peter Keating",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-clean": "~0.5.0"
+  }
+}

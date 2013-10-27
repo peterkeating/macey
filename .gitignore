@@ -1,0 +1,7 @@
+# ignore node_modules which should be generated using `npm install` on the command
+# line.
+node_modules/
+
+# artefacts from the Grunt build process generated using `grunt` on the command
+# line.
+dist/
