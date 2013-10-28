@@ -53,6 +53,10 @@ module.exports = function(grunt) {
          * Compiles Sass into CSS.
          */
         sass: {
+            /**
+             * For production, Sass is compiled into compressed style sheet in order
+             * to reduce weight of file.
+             */
             dist: {
                 options: {
                     style: 'compressed'
@@ -60,8 +64,38 @@ module.exports = function(grunt) {
                 files: {
                     '<%= config.css %>styles.css': '<%= config.css %>styles.scss'
                 }
+            },
+
+            /**
+             * For development, Sass is compiled into readable style sheet.
+             */
+            dev: {
+                options: {
+                    style: 'expanded'
+                },
+                files: {
+                    '<%= config.css %>styles.css': '<%= config.css %>styles.scss'
+                }
             }
-        }
+        },
+
+        /**
+         * Starts watching files for additions, changes or deletions, which will
+         * trigger a task to be run. Current tasks are display below.
+         *
+         * - Changes to .scss files will trigger a Sass to CSS conversion.
+         */
+        watch: {
+
+            /**
+             * Any changes made to a .scss file in the project trigger a conversion
+             * of Sass to CSS.
+             */
+            sass: {
+                files: '**/*.scss',
+                tasks: ['sass:dev']
+            }
+        },
 
     });
 
@@ -71,6 +105,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('default', ['clean', 'sass:dist', 'copy']);
 };
