@@ -14,7 +14,8 @@ module.exports = function(grunt) {
      * Configuration object for the build process.
      */
     var config = {
-        dist: 'dist/'
+        dist: 'dist/',
+        css: 'assets/css/'
     };
 
     /**
@@ -37,16 +38,28 @@ module.exports = function(grunt) {
          */
         copy: {
             dist: {
+                excludeEmpty: true,
                 expand: true,
                 src: [
-                  './**',
-                  '!./node_modules/**',
-                  '!./.git/**',
-                  '!./gruntfile.js',
-                  '!./package.json',
-                  '!./*.md'
+                  './**/*.css',
+                  './**/*.hbs',
+                  '!./node_modules/**'
                 ],
                 dest: '<%= config.dist %>'
+            }
+        },
+
+        /**
+         * Compiles Sass into CSS.
+         */
+        sass: {
+            dist: {
+                options: {
+                    style: 'compressed'
+                },
+                files: {
+                    '<%= config.css %>styles.css': '<%= config.css %>styles.scss'
+                }
             }
         }
 
@@ -57,6 +70,7 @@ module.exports = function(grunt) {
      */
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-sass');
 
-    grunt.registerTask('default', ['clean', 'copy']);
+    grunt.registerTask('default', ['clean', 'sass:dist', 'copy']);
 };
