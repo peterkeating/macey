@@ -5,15 +5,18 @@
  *
  * VARS......................Reusable values used to configure the style sheet.
  *
- * RESET.....................CSS reset courtesy of normalize. http://necolas.github.io/normalize.css/
+ * NORMALIZE.................CSS reset courtesy of normalize. http://necolas.github.io/normalize.css/
+ * RESET.....................Some generic resets.
+ *
  */
 
 @import "vars";
 
 /**
  * -----------------------------------------------------------------------------
- *   $RESET
+ *   $NORMALIZE
  * -----------------------------------------------------------------------------
  */
 
 @import "vendor/normalize";
+@import "generic/reset";
