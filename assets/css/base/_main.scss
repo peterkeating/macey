@@ -1,0 +1,15 @@
+/**
+ * -----------------------------------------------------------------------------
+ *   $MAIN
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * 1. Ensure the html element stretches to at least fill the window size.
+ */
+html {
+    color: $default-font-color;
+    font-size: 100%;
+    line-height: $default-line-height;
+    min-height: 100%; /* 1 */
+}

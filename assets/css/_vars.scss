@@ -3,3 +3,28 @@
  *   $VARS
  * -----------------------------------------------------------------------------
  */
+
+/**
+ * All spacing (margin, padding) should be based of this value.
+ */
+
+$base-spacing-unit: 1em;
+$half-base-spacing-unit: $base-spacing-unit / 2;
+
+/**
+ * Primary colour for the blog.
+ */
+
+$brand-color: #0374e4;
+
+/**
+ * Default font styles.
+ */
+
+$default-font-color: #333;
+
+/**
+ * Typography settings.
+ */
+
+$default-line-height: 1.4;

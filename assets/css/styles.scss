@@ -5,8 +5,13 @@
  *
  * VARS......................Reusable values used to configure the style sheet.
  *
- * NORMALIZE.................CSS reset courtesy of normalize. http://necolas.github.io/normalize.css/
- * RESET.....................Some generic resets.
+ * NORMALIZE................. CSS reset courtesy of normalize. http://necolas.github.io/normalize.css/
+ * RESET..................... Some generic resets.
+ *
+ * MAIN...................... html, body elements.
+ * HEADINGS.................. h1, h2, h3...
+ * PARAGRAPHS................
+ * LINKS..................... Hyperlinks.
  *
  */
 
@@ -20,3 +25,9 @@
 
 @import "vendor/normalize";
 @import "generic/reset";
+
+
+@import "base/main";
+@import "base/headings";
+@import "base/paragraphs";
+@import "base/links";
