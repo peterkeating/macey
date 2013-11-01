@@ -1,17 +1,8 @@
 /**
  * -----------------------------------------------------------------------------
- *   $MAIN
+ *   $SPACING
  * -----------------------------------------------------------------------------
  */
 
-html {
-    color: $default-font-color;
-    font-size: 100%;
-    height: 100%;
-    line-height: $default-line-height;
-}
+.spacing-vertical { padding: $base-spacing-unit 0; }
 
-html,
-body {
-    height: 100%;
-}

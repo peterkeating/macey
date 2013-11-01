@@ -15,7 +15,8 @@ $half-base-spacing-unit: $base-spacing-unit / 2;
  * Primary colour for the blog.
  */
 
-$brand-color: #0374e4;
+$brand-color: #66bc4b;
+$brand-color-darker: darken($brand-color, 7.5%);
 
 /**
  * Default font styles.

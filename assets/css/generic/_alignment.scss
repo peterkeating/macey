@@ -1,17 +1,10 @@
 /**
  * -----------------------------------------------------------------------------
- *   $MAIN
+ *   $ALIGNMENT
  * -----------------------------------------------------------------------------
  */
 
-html {
-    color: $default-font-color;
-    font-size: 100%;
-    height: 100%;
-    line-height: $default-line-height;
-}
-
-html,
-body {
-    height: 100%;
+.vertical-middle {
+    display: table-cell;
+    vertical-align: middle;
 }

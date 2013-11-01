@@ -7,11 +7,16 @@
  *
  * NORMALIZE................. CSS reset courtesy of normalize. http://necolas.github.io/normalize.css/
  * RESET..................... Some generic resets.
+ * SPACING................... Different classes for applying spacing to an element.
+ * ALIGNMENT................. Alignment of content within an element.
  *
  * MAIN...................... html, body elements.
  * HEADINGS.................. h1, h2, h3...
  * PARAGRAPHS................
  * LINKS..................... Hyperlinks.
+ *
+ * HEADER.................... Header section of the blog.
+ * TEXT...................... Different ways of styling text.
  *
  */
 
@@ -25,9 +30,15 @@
 
 @import "vendor/normalize";
 @import "generic/reset";
+@import "generic/spacing";
+@import "generic/alignment";
 
 
 @import "base/main";
 @import "base/headings";
 @import "base/paragraphs";
 @import "base/links";
+
+
+@import "ui/header";
+@import "ui/text";

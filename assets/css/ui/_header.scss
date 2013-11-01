@@ -1,0 +1,19 @@
+/**
+ * -----------------------------------------------------------------------------
+ *   $HEADER
+ * -----------------------------------------------------------------------------
+ */
+
+.header {
+    background-color: $brand-color;
+
+    background: -webkit-radial-gradient(50%, farthest-corner, $brand-color 0%, $brand-color-darker 100%);
+    background:         radial-gradient(50%, farthest-corner, $brand-color 0%, $brand-color-darker 100%);
+
+    color: white;
+    display: table;
+    height: 80%;
+    margin-bottom: $base-spacing-unit;
+    padding: $base-spacing-unit 0;
+    width: 100%;
+}
