@@ -7,8 +7,8 @@
 .header {
     background-color: $brand-color;
 
-    background: -webkit-radial-gradient(50%, farthest-corner, $brand-color 0%, $brand-color-darker 100%);
-    background:         radial-gradient(50%, farthest-corner, $brand-color 0%, $brand-color-darker 100%);
+    background: -webkit-radial-gradient(50%, farthest-corner, $brand-color 0%, $brand-color-dark 100%);
+    background:         radial-gradient(50%, farthest-corner, $brand-color 0%, $brand-color-dark 100%);
 
     color: white;
     display: table;

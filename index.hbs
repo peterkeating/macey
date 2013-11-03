@@ -1,12 +1,16 @@
 {{!< default}}
 
+<ul class="block-list post-list">
+
 {{#foreach posts}}
 
-<div class="{{post_class}}">
-    <span class="post-meta">{{date format="DD MMM YYYY"}} {{#if tags}}on {{tags}}{{/if}}</span>
-    <h2><a href="{{url}}">{{{title}}}</a></h2>
-</div>
+<li class="{{post_class}}">
+    <div class="post-meta">{{date format="DD MMM YYYY"}}</div>
+    <h3><a href="{{url}}" class="link-brand">{{{title}}}</a></h3>
+</li>
 
 {{/foreach}}
+
+</ul>
 
 {{pagination}}

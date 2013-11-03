@@ -15,3 +15,8 @@ html,
 body {
     height: 100%;
 }
+
+.content {
+    padding: 0 $base-spacing-unit;
+    padding-bottom: $base-spacing-unit;
+}

@@ -16,10 +16,10 @@ $half-base-spacing-unit: $base-spacing-unit / 2;
  */
 
 $brand-color: #66bc4b;
-$brand-color-darker: darken($brand-color, 7.5%);
+$brand-color-dark: darken($brand-color, 7.5%);
 
 /**
- * Default font styles.
+ * Font styles.
  */
 
 $default-font-color: #333;
@@ -29,3 +29,15 @@ $default-font-color: #333;
  */
 
 $default-line-height: 1.4;
+
+/**
+ * Colour palette.
+ */
+
+$color-soft: #969696;
+
+/**
+ * Different sizes for text.
+ */
+
+$text-small: .9em;
