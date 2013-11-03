@@ -5,6 +5,8 @@
  */
 
 .header {
+    @include box-sizing();
+
     background-color: $brand-color;
 
     background: -webkit-radial-gradient(50%, farthest-corner, $brand-color 0%, $brand-color-dark 100%);
@@ -14,6 +16,6 @@
     display: table;
     height: 80%;
     margin-bottom: $base-spacing-unit;
-    padding: $base-spacing-unit 0;
+    padding: $base-spacing-unit;
     width: 100%;
 }

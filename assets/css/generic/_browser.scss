@@ -1,0 +1,15 @@
+/**
+ * -----------------------------------------------------------------------------
+ *   $BROWSER
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Cross browser styles for box-sizing attribute that instructs element to include
+ * the padding as part of the width calculation.
+ */
+@mixin box-sizing() {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}

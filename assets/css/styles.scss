@@ -7,6 +7,7 @@
  *
  * NORMALIZE................. CSS reset courtesy of normalize. http://necolas.github.io/normalize.css/
  * RESET..................... Some generic resets.
+ * BROWSER................... Sass mixins for cross browser compliant CSS.
  * SPACING................... Different classes for applying spacing to an element.
  * ALIGNMENT................. Alignment of content within an element.
  *
@@ -31,6 +32,7 @@
 
 @import "vendor/normalize";
 @import "generic/reset";
+@import "generic/browser";
 @import "generic/spacing";
 @import "generic/alignment";
 
