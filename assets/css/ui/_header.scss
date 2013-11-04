@@ -19,3 +19,11 @@
     padding: $base-spacing-unit;
     width: 100%;
 }
+
+.header-logo {
+    @include border-radius($logo-size / 2);
+
+    border: 2px solid $brand-color-dark;
+    margin-bottom: $base-spacing-unit;
+    max-width: $logo-size;
+}
