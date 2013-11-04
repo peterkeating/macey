@@ -24,6 +24,9 @@ $brand-color-dark: darken($brand-color, 7.5%);
 
 $default-font-color: #333;
 
+$heading-font-family: 'Lato', serif;
+$body-font-family: 'Open Sans', sans-serif;
+
 /**
  * Typography settings.
  */
@@ -35,13 +38,14 @@ $default-line-height: 1.4;
  */
 
 $color-soft: #969696;
+$color-white: #fcfcfc;
 
 /**
  * Different sizes for text.
  */
 
 $text-small: 0.9em;
-$text-large: 2.6em;
+$text-large: 3.2em;
 
 /**
  * Logo dimensions.

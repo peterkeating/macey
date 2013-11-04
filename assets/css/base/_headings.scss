@@ -8,6 +8,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: $base-spacing-unit;
 }
 
-h1 {
-    font-size: $text-large;
+h1, h2, h3 {
+    font-family: $heading-font-family;
+    font-weight: 700;
 }

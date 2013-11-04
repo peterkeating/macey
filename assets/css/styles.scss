@@ -10,6 +10,7 @@
  * BROWSER................... Sass mixins for cross browser compliant CSS.
  * SPACING................... Different classes for applying spacing to an element.
  * ALIGNMENT................. Alignment of content within an element.
+ * GRADIENTS................. Background gradients used in the theme.
  *
  * MAIN...................... html, body elements.
  * HEADINGS.................. h1, h2, h3...
@@ -35,6 +36,7 @@
 @import "generic/browser";
 @import "generic/spacing";
 @import "generic/alignment";
+@import "generic/gradients";
 
 
 @import "base/main";
