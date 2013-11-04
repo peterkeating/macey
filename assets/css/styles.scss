@@ -21,6 +21,7 @@
  * TEXT...................... Different ways of styling text.
  * BLOCKLIST................. List with elements stacked on top of each other.
  * POSTS..................... Classes related to posts.
+ * PAGINATION................ Paging component.
  */
 
 @import "vars";
@@ -49,3 +50,4 @@
 @import "ui/text";
 @import "ui/block-list";
 @import "ui/posts";
+@import "ui/pagination";
