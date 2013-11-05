@@ -27,6 +27,15 @@
 }
 
 .post-content {
+
+    /**
+     * 1 & 2: See above.
+     */
+    h2, h3, h4 {
+        padding: 0 $base-spacing-unit-rem; /* 1 */
+        padding: 0 $base-spacing-unit-px; /* 2 */
+    }
+
     p {
         padding: 0 $base-spacing-unit;
     }
@@ -43,5 +52,26 @@
         margin-bottom: $base-spacing-unit;
         padding: 0 $base-spacing-unit;
         padding-bottom: $base-spacing-unit;
+
+        word-wrap: break-word;
+    }
+
+    ul {
+        list-style: disc;
+        margin: $half-base-spacing-unit 0;
+        padding-left: $base-spacing-unit * 3;
+        padding-right: $base-spacing-unit;
+
+        > li {
+            margin-bottom: $half-base-spacing-unit;
+        }
+    }
+
+    .quote {
+        background-color: $brand-color;
+        color: white;
+        font-style: italic;
+        margin-bottom: $base-spacing-unit;
+        padding: $base-spacing-unit;
     }
 }
