@@ -31,7 +31,7 @@
     /**
      * 1 & 2: See above.
      */
-    h2, h3, h4 {
+    h2, h3, h4, pre {
         padding: 0 $base-spacing-unit-rem; /* 1 */
         padding: 0 $base-spacing-unit-px; /* 2 */
     }
@@ -48,9 +48,11 @@
         border-left: 0;
 
         font-size: $text-smallest;
+        line-height: 1.1;
 
-        margin-bottom: $base-spacing-unit;
-        padding: 0 $base-spacing-unit;
+        margin-bottom: $base-spacing-unit-rem;
+        margin-bottom: $base-spacing-unit-px;
+
         padding-bottom: $base-spacing-unit;
 
         word-wrap: break-word;
