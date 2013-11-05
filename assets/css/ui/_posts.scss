@@ -4,8 +4,44 @@
  * -----------------------------------------------------------------------------
  */
 
+.post-list .post-meta {
+    margin-bottom: $half-base-spacing-unit;
+}
+
 .post-meta {
     color: $color-soft;
     font-size: $text-small;
-    margin-bottom: $half-base-spacing-unit;
+    margin-bottom: $base-spacing-unit;
+    padding: 0 $base-spacing-unit;
+}
+
+/**
+ * 1.   Due to the post title being a larger font, spacing with ems causes the
+ *      title to not line up with the content & meta details.
+ * 2.   Support for rem is very good but some (<= IE 8, Opera mini).
+ *      Source: http://caniuse.com/rem
+ */
+.post-title {
+    padding: 0 $base-spacing-unit-rem; /* 1 */
+    padding: 0 $base-spacing-unit-px; /* 2 */
+}
+
+.post-content {
+    p {
+        padding: 0 $base-spacing-unit;
+    }
+
+    pre {
+        background-color: $color-lightest;
+
+        border: 1px solid $color-light;
+        border-right: 0;
+        border-left: 0;
+
+        font-size: $text-smallest;
+
+        margin-bottom: $base-spacing-unit;
+        padding: 0 $base-spacing-unit;
+        padding-bottom: $base-spacing-unit;
+    }
 }

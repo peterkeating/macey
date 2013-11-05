@@ -9,6 +9,9 @@
  */
 
 $base-spacing-unit: 1em;
+$base-spacing-unit-rem: 1rem;
+$base-spacing-unit-px: 16px;
+
 $half-base-spacing-unit: $base-spacing-unit / 2;
 
 /**
@@ -31,12 +34,14 @@ $body-font-family: 'Open Sans', sans-serif;
  * Typography settings.
  */
 
-$default-line-height: 1.4;
+$default-line-height: 1.6;
 
 /**
  * Colour palette.
  */
 
+$color-lightest: #ebebeb;
+$color-light: #dedede;
 $color-soft: #969696;
 $color-white: #fcfcfc;
 
@@ -44,6 +49,7 @@ $color-white: #fcfcfc;
  * Different sizes for text.
  */
 
+$text-smallest: 0.8em;
 $text-small: 0.9em;
 $text-large: 3.2em;
 

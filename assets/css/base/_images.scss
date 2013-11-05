@@ -1,0 +1,13 @@
+/**
+ * -----------------------------------------------------------------------------
+ *   $IMAGES
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * 1.   Basic responsive image solution to ensure images don't force the content
+ *      to overflow the view port bounds.
+ */
+img {
+    max-width: 100%;
+}

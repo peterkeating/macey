@@ -16,6 +16,7 @@
  * HEADINGS.................. h1, h2, h3...
  * PARAGRAPHS................
  * LINKS..................... Hyperlinks.
+ * IMAGES....................
  *
  * HEADER.................... Header section of the blog.
  * TEXT...................... Different ways of styling text.
@@ -44,6 +45,7 @@
 @import "base/headings";
 @import "base/paragraphs";
 @import "base/links";
+@import "base/images";
 
 
 @import "ui/header";

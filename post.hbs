@@ -3,11 +3,13 @@
 <div class="{{post_class}}">
     {{#post}}
 
-    <span class="post-meta">{{date format='DD MMM YYYY'}} {{#if tags}}on {{tags separator=" | "}}{{/if}}</span>
+    <div class="post-meta">{{date format='DD MMM YYYY'}} {{#if tags}}on {{tags separator=" | "}}{{/if}}</div>
 
-    <h1>{{{title}}}</h1>
+    <h2 class="post-title">{{{title}}}</h2>
 
-    {{content}}
+    <div class="post-content">
+        {{content}}
+    </div>
 
     {{/post}}
 </div>
