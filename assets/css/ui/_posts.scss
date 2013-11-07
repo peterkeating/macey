@@ -22,58 +22,6 @@
  *      Source: http://caniuse.com/rem
  */
 .post-title {
-    padding: 0 $base-spacing-unit-rem; /* 1 */
     padding: 0 $base-spacing-unit-px; /* 2 */
-}
-
-.post-content {
-
-    /**
-     * 1 & 2: See above.
-     */
-    h2, h3, h4, pre {
-        padding: 0 $base-spacing-unit-rem; /* 1 */
-        padding: 0 $base-spacing-unit-px; /* 2 */
-    }
-
-    p {
-        padding: 0 $base-spacing-unit;
-    }
-
-    pre {
-        background-color: $color-lightest;
-
-        border: 1px solid $color-light;
-        border-right: 0;
-        border-left: 0;
-
-        font-size: $text-smallest;
-        line-height: 1.1;
-
-        margin-bottom: $base-spacing-unit-rem;
-        margin-bottom: $base-spacing-unit-px;
-
-        padding-bottom: $base-spacing-unit;
-
-        word-wrap: break-word;
-    }
-
-    ul {
-        list-style: disc;
-        margin: $half-base-spacing-unit 0;
-        padding-left: $base-spacing-unit * 3;
-        padding-right: $base-spacing-unit;
-
-        > li {
-            margin-bottom: $half-base-spacing-unit;
-        }
-    }
-
-    .quote {
-        background-color: $brand-color;
-        color: white;
-        font-style: italic;
-        margin-bottom: $base-spacing-unit;
-        padding: $base-spacing-unit;
-    }
+    padding: 0 $base-spacing-unit-rem; /* 1 */
 }
