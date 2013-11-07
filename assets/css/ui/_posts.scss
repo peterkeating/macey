@@ -20,24 +20,28 @@
             margin-bottom: $half-base-spacing-unit;
         }
 
+        /**
+         * 1. Calculated by: 140 / 16. Also added extra ems to take into account
+         *    the smaller font size.
+         */
         .post-meta {
             float: left;
             margin-right: $base-spacing-unit * 2;
             line-height: 2.2;
             padding: 0;
             text-align: right;
-            width: 140px;
+            width: 10em /* 1 */
         }
 
         /**
          * 1. Content should fill the remaining content width taking into account
-         *    the width of the meta section & the spacing between (34px)
+         *    the width of the meta section & the spacing between.
          */
         .post-title {
             float: left;
             margin-bottom: $half-base-spacing-unit;
             padding: 0;
-            width: $content-max-width - 174px; /* 1 */
+            width: $content-max-width - 16.5em; /* 1 */
 
             a {
                 display: block;
