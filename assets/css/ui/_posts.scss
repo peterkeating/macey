@@ -4,8 +4,50 @@
  * -----------------------------------------------------------------------------
  */
 
-.post-list .post-meta {
-    margin-bottom: $half-base-spacing-unit;
+.post-list {
+    margin: 0 auto;
+    max-width: $content-max-width;
+
+    .post-meta {
+        margin-bottom: $half-base-spacing-unit;
+    }
+
+    /**
+     * Positions the post publish date alongside the title.
+     */
+    @media all and (min-width: $bp-inline-post-meta) {
+        > li {
+            margin-bottom: $half-base-spacing-unit;
+        }
+
+        .post-meta {
+            float: left;
+            margin-right: $base-spacing-unit * 2;
+            line-height: 2.2;
+            padding: 0;
+            text-align: right;
+            width: 140px;
+        }
+
+        /**
+         * 1. Content should fill the remaining content width taking into account
+         *    the width of the meta section & the spacing between (34px)
+         */
+        .post-title {
+            float: left;
+            margin-bottom: $half-base-spacing-unit;
+            padding: 0;
+            width: $content-max-width - 174px; /* 1 */
+
+            a {
+                display: block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 100%;
+            }
+        }
+    }
 }
 
 .post-meta {

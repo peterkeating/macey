@@ -4,9 +4,9 @@
 
 {{#foreach posts}}
 
-<li class="{{post_class}}">
+<li class="cf {{post_class}}">
     <div class="post-meta">{{date format="Do MMMM YYYY"}}</div>
-    <h3 class="post-title"><a href="{{url}}" class="link-brand">{{{title}}}</a></h3>
+    <h3 class="post-title"><a href="{{url}}" class="link-brand" title="{{{title}}}">{{{title}}}</a></h3>
 </li>
 
 {{/foreach}}
