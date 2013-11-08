@@ -5,7 +5,8 @@
  */
 
 .content-body {
-    padding: 0 4%;
+    //border-top: 1px solid $color-light;
+    padding: $base-spacing-unit * 1.5 4%;
 
     img, pre, blockquote {
         display: block;
@@ -80,6 +81,7 @@
     @media all and (min-width: $content-max-width) {
         margin: 0 auto;
         max-width: $content-max-width - ($base-spacing-unit * 2);
-        padding: 0 $base-spacing-unit;
+        padding-left: $base-spacing-unit;
+        padding-right: $base-spacing-unit;
     }
 }
