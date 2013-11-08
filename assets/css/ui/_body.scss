@@ -12,11 +12,23 @@
 
         margin: 0 -4% $base-spacing-unit-px -4%;
         margin: 0 -4% $base-spacing-unit-rem -4%;
+
+        @media all and (min-width: $content-max-width) {
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
 
     img {
         max-width: none;
         width: 108%;
+
+        @media all and (min-width: $content-max-width) {
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            width: auto;
+        }
     }
 
     pre {
@@ -63,5 +75,11 @@
         p:last-child {
             margin-bottom: 0;
         }
+    }
+
+    @media all and (min-width: $content-max-width) {
+        margin: 0 auto;
+        max-width: $content-max-width - ($base-spacing-unit * 2);
+        padding: 0 $base-spacing-unit;
     }
 }
