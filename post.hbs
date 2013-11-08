@@ -3,7 +3,9 @@
 <div class="the-post {{post_class}}">
     {{#post}}
 
-    <div class="post-meta">{{date format='DD MMM YYYY'}} {{#if tags}}on {{tags separator=" | "}}{{/if}}</div>
+    <div class="post-meta">{{date format="Do MMMM YYYY"}}</div>
+
+    <div class="post-tags">{{#if tags}}{{tags separator=", "}}{{/if}}</div>
 
     <h2 class="post-title">{{{title}}}</h2>
 
