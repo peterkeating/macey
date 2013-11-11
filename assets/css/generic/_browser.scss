@@ -5,6 +5,26 @@
  */
 
 /**
+ * Cross browser styles for rounded corners.
+ *
+ * 1. -webkit prefix is required for very old browser. Source: http://caniuse.com/border-radius
+ */
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius; /* 1 */
+            border-radius: $radius;
+}
+
+/**
+ * Cross browser styles for box-shadow.
+ * Source: http://caniuse.com/css-boxshadow
+ */
+@mixin box-shadow($h, $v, $b, $s, $color) {
+    -webkit-box-shadow: $h $v $b $s $color;
+       -moz-box-shadow: $h $v $b $s $color;
+           -box-shadow: $h $v $b $s $color;
+}
+
+/**
  * Cross browser styles for box-sizing attribute that instructs element to include
  * the padding as part of the width calculation.
  * Source: http://caniuse.com/css3-boxsizing
@@ -13,14 +33,4 @@
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
-}
-
-/**
- * Cross browser styles for rounded corners.
- *
- * 1. -webkit prefix is required for very old browser. Source: http://caniuse.com/border-radius
- */
-@mixin border-radius($radius) {
-    -webkit-border-radius: $radius; /* 1 */
-            border-radius: $radius;
 }

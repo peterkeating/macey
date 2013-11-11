@@ -30,6 +30,8 @@
  * POSTS..................... Classes related to posts.
  * BODY...................... CSS used within a large body of content.
  * PAGINATION................ Paging component.
+ * FOOTER.................... Footer section.
+ * ICONS..................... Icons.
  */
 
 @import "vars";
@@ -67,4 +69,6 @@
 @import "ui/posts";
 @import "ui/body";
 @import "ui/pagination";
+@import "ui/footer";
+@import "ui/icons";
 

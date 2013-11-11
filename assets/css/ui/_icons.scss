@@ -1,0 +1,39 @@
+/**
+ * -----------------------------------------------------------------------------
+ *   $ICONS
+ * -----------------------------------------------------------------------------
+ */
+
+@font-face {
+    font-family: 'icons';
+    src:url('../icons/icons.eot');
+    src:url('../icons/icons.eot?#iefix') format('embedded-opentype'),
+        url('../icons/icons.woff') format('woff'),
+        url('../icons/icons.ttf') format('truetype'),
+        url('../icons/icons.svg#icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon-rss,
+.icon-twitter,
+.icon-google-plus,
+.icon-facebook,
+.icon-github,
+.icon-email,
+.icon-linked-in {
+    border-bottom: 0;
+    font-family: 'icons';
+    font-size: $icon-font-size;
+    line-height: 1;
+    text-decoration: none;
+    speak: none;
+}
+
+.icon-twitter:before { content: "\e603"; }
+.icon-facebook:before { content: "\e604"; }
+.icon-github:before { content: "\e605"; }
+.icon-rss:before { content: "\e606"; }
+.icon-linkedin:before { content: "\e607"; }
+.icon-google-plus:before { content: "\e608"; }
+.icon-envelope:before { content: "\e60a"; }
