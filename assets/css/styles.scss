@@ -6,6 +6,8 @@
  * VARS......................Reusable values used to configure the style sheet.
  *
  * NORMALIZE................. CSS reset courtesy of normalize. http://necolas.github.io/normalize.css/
+ * PRISM..................... Prism provides beautiful code highlighting. http://prismjs.com/
+ *
  * RESET..................... Some generic resets.
  * BROWSER................... Sass mixins for cross browser compliant CSS.
  * CLEARFIX.................. Micro clearfix courtesy of Nicolas Gallagher http://nicolasgallagher.com/micro-clearfix-hack/
@@ -20,6 +22,7 @@
  * IMAGES....................
  * BLOCKQUOTE................
  * HR........................ Horizontal rule.
+ * CODE...................... Code samples.
  *
  * HEADER.................... Header section of the blog.
  * TEXT...................... Different ways of styling text.
@@ -38,6 +41,8 @@
  */
 
 @import "vendor/normalize";
+@import "vendor/prism";
+
 @import "generic/reset";
 @import "generic/browser";
 @import "generic/clearfix";
@@ -53,6 +58,7 @@
 @import "base/images";
 @import "base/blockquote";
 @import "base/hr";
+@import "base/code";
 
 
 @import "ui/header";
@@ -61,3 +67,4 @@
 @import "ui/posts";
 @import "ui/body";
 @import "ui/pagination";
+

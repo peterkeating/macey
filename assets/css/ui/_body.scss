@@ -39,41 +39,6 @@
         }
     }
 
-    pre {
-        background-color: $color-lightest;
-
-        border: 1px solid $color-light;
-        border-right: 0;
-        border-left: 0;
-
-        font-size: $text-smallest;
-        line-height: 1.4;
-
-        padding: $base-spacing-unit 4%;
-
-        word-wrap: break-word;
-
-        /**
-         * 1. Due to Ghost automatically adding anchor tags for URLs ensure that
-         *    the link doesn't appear as a regular link.
-         * 2. Disables the hyper link from being clickable.
-         *    Source: http://stackoverflow.com/questions/2091168/disable-a-link-using-css
-         */
-        a {
-            border-bottom: 0; /* 1 */
-            cursor: default; /* 2 */
-            pointer-events: none; /* 2 */
-        }
-
-        /**
-         * Code samples no longer fill the width of the window so require a border
-         * so the differing background doesn't bleed into the site background.
-         */
-        @media all and (min-width: $content-max-width) {
-            border: 1px solid $color-light;
-        }
-    }
-
     ul {
         list-style: disc;
         margin: $half-base-spacing-unit 0;
