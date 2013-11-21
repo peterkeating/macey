@@ -8,48 +8,66 @@
     margin: 0 auto;
     max-width: $content-max-width;
 
-    .post-meta {
+    > li {
         margin-bottom: $half-base-spacing-unit;
     }
 
     /**
-     * Positions the post publish date alongside the title.
+     * 1. Calculated by: 140 / 16. Also added extra ems to take into account
+     *    the smaller font size.
      */
-    @media all and (min-width: $bp-inline-post-meta) {
+    .post-meta {
+        float: left;
+        margin-right: $base-spacing-unit * 2;
+        line-height: 2.2;
+        padding: 0;
+        text-align: right;
+        width: 10em /* 1 */
+    }
+
+    /**
+     * 1. Content should fill the remaining content width taking into account
+     *    the width of the meta section & the spacing between.
+     */
+    .post-title {
+        float: left;
+        padding: 0;
+        width: $content-max-width - 16.5em; /* 1 */
+
+        a {
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 100%;
+        }
+    }
+
+    /**
+     * Positions the post publish date above the title.
+     */
+    @media all and (max-width: $bp-inline-post-meta) {
         > li {
-            margin-bottom: $half-base-spacing-unit;
+            margin: $half-base-spacing-unit;
+            margin-top: 0;
         }
 
-        /**
-         * 1. Calculated by: 140 / 16. Also added extra ems to take into account
-         *    the smaller font size.
-         */
+        .post-title,
         .post-meta {
-            float: left;
-            margin-right: $base-spacing-unit * 2;
-            line-height: 2.2;
-            padding: 0;
-            text-align: right;
-            width: 10em /* 1 */
+            float: none;
+            margin-right: 0;
+            text-align: left;
+            width: auto;
         }
 
-        /**
-         * 1. Content should fill the remaining content width taking into account
-         *    the width of the meta section & the spacing between.
-         */
-        .post-title {
-            float: left;
+        .post-meta {
             margin-bottom: $half-base-spacing-unit;
-            padding: 0;
-            width: $content-max-width - 16.5em; /* 1 */
+        }
 
-            a {
-                display: block;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                width: 100%;
-            }
+        .post-title a {
+            overflow: visible;
+            text-overflow: clip;
+            white-space: normal;
         }
     }
 }
