@@ -5,14 +5,12 @@
  */
 
 .header {
-    @include box-sizing();
     @include radial-gradient($brand-color, $brand-color-dark);
 
     color: $color-white;
     display: table;
     height: 80%;
     margin-bottom: $base-spacing-unit;
-    padding: $base-spacing-unit;
     width: 100%;
 }
 

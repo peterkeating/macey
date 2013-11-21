@@ -4,5 +4,7 @@
  * -----------------------------------------------------------------------------
  */
 
+.spacing { padding: $base-spacing-unit; }
+
 .spacing-vertical { padding: $base-spacing-unit 0; }
 .spacing-vertical-double { padding: $base-spacing-unit * 2 0 }
