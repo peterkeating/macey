@@ -34,3 +34,12 @@
        -moz-box-sizing: border-box;
             box-sizing: border-box;
 }
+
+/**
+ * Cross browser implementation of inline-block that works in IE 7 & 8.
+ */
+@mixin inline-block() {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}

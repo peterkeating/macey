@@ -24,8 +24,8 @@
 }
 
 .footer-social > a {
+    @include inline-block();
     border-bottom: 0;
-    display: inline-block;
     margin: 0 $half-base-spacing-unit / 2;
     margin-bottom: $half-base-spacing-unit;
 
