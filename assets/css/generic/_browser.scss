@@ -7,11 +7,14 @@
 /**
  * Cross browser styles for rounded corners.
  *
- * 1. -webkit prefix is required for very old browser. Source: http://caniuse.com/border-radius
+ * 1. http://code-tricks.com/border-radius-for-ie7-using-css3-pie/
+ * 2. -webkit prefix is required for very old browser. Source: http://caniuse.com/border-radius
  */
 @mixin border-radius($radius) {
-    -webkit-border-radius: $radius; /* 1 */
+    behavior:  url(/assets/css/PIE.htc); /* 1 */
+    -webkit-border-radius: $radius; /* 2 */
             border-radius: $radius;
+    position: relative;
 }
 
 /**
