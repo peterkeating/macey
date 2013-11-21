@@ -5,37 +5,41 @@
  */
 
 .content-body {
-    padding: $base-spacing-unit * 1.5 4%;
+    margin: 0 auto;
+    max-width: $content-max-width - ($base-spacing-unit * 2);
+    padding: $base-spacing-unit * 1.5 $base-spacing-unit;
 
     img, pre, blockquote {
         display: block;
 
-        margin: 0 -4% $base-spacing-unit-px -4%;
-        margin: 0 -4% $base-spacing-unit-rem -4%;
+        margin-left: 0;
+        margin-right: 0;
 
         /**
          * Images, code samples & quotes now fit within the content container and
          * should no longer stretch the width of the window.
          */
-        @media all and (min-width: $content-max-width) {
-            margin-left: 0;
-            margin-right: 0;
+        @media all and (max-width: $content-max-width) {
+            margin: 0 -4% $base-spacing-unit-px -4%;
+            margin: 0 -4% $base-spacing-unit-rem -4%;
         }
     }
 
     img {
-        max-width: none;
-        width: 108%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
 
         /**
          * Images no longer take up the available width, instead being as big as
          * possible and then aligned centrally.
          */
-        @media all and (min-width: $content-max-width) {
-            max-width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-            width: auto;
+        @media all and (max-width: $content-max-width) {
+            margin: 0 -4% $base-spacing-unit-px -4%;
+            margin: 0 -4% $base-spacing-unit-rem -4%;
+            max-width: none;
+            width: 108%;
         }
     }
 
@@ -62,10 +66,9 @@
      * Content should not stretch further than maximum content width. Also the
      * content should be align centrally and have equal padding either side.
      */
-    @media all and (min-width: $content-max-width) {
-        margin: 0 auto;
-        max-width: $content-max-width - ($base-spacing-unit * 2);
-        padding-left: $base-spacing-unit;
-        padding-right: $base-spacing-unit;
+    @media all and (max-width: $content-max-width) {
+        margin: 0;
+        max-width: none;
+        padding: $base-spacing-unit * 1.5 4%;
     }
 }

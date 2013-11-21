@@ -8,8 +8,6 @@ pre {
     background-color: $color-lightest;
 
     border: 1px solid $color-light;
-    border-right: 0;
-    border-left: 0;
 
     font-size: $text-smallest;
     line-height: 1.4;
@@ -34,7 +32,8 @@ pre {
      * Code samples no longer fill the width of the window so require a border
      * so the differing background doesn't bleed into the site background.
      */
-    @media all and (min-width: $content-max-width) {
-        border: 1px solid $color-light;
+    @media all and (max-width: $content-max-width) {
+        border-right: 0;
+        border-left: 0;
     }
 }
