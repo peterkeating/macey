@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE 7]><html class="ie7"> <![endif]-->
+<!--[if gt IE 7]><!--><html> <!--<![endif]-->
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -32,10 +33,11 @@
 
     <div class="footer text-centered">
         <div class="footer-social">
-            <a href="{{@blog.url}}/rss/" class="icon-rss"></a>
-            <a href="http://twitter.com" class="icon-twitter"></a>
-            <a href="http://github.com" class="icon-github"></a>
+            <a href="{{@blog.url}}/rss/" class="icon icon-rss"><!--[if IE 7]>RSS<![endif]--></a>
+            <a href="http://twitter.com" class="icon icon-twitter"><!--[if IE 7]>Twitter<![endif]--></a>
+            <a href="http://github.com" class="icon icon-github"><!--[if IE 7]>Github<![endif]--></a>
         </div>
+
         <a href="https://github.com/peterkeating/macey">Macey</a> theme for <a href="http://ghost.org">Ghost</a>.
     </div>
 
