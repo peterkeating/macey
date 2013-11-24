@@ -44,8 +44,10 @@ module.exports = function(grunt) {
                     './**/*.css',
                     './**/*.hbs',
                     './**/*.js',
+                    './assets/icons/**',
                     '!./gruntfile.js',
-                    '!./node_modules/**'
+                    '!./node_modules/**',
+                    '!./**/*.md'
                 ],
                 dest: '<%= config.dist %>'
             }
