@@ -41,9 +41,11 @@ module.exports = function(grunt) {
                 excludeEmpty: true,
                 expand: true,
                 src: [
-                  './**/*.css',
-                  './**/*.hbs',
-                  '!./node_modules/**'
+                    './**/*.css',
+                    './**/*.hbs',
+                    './**/*.js',
+                    '!./gruntfile.js',
+                    '!./node_modules/**'
                 ],
                 dest: '<%= config.dist %>'
             }
