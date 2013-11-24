@@ -25,11 +25,15 @@
 }
 
 /**
- * Icon fonts aren't supported by IE 7 so just display text representation of icon.
+ * before pseudo & content attribute aren't supported by the browser. Fallback is
+ * to show the hidden text to the user.
  */
-.ie7 .icon {
-    font-family: $body-font-family; /* 1 */
+.no-generatedcontent .icon,
+.no-generatedcontent .icon .ir  {
+    color: $color-soft;
+    font-family: $body-font-family;
     font-size: 1em;
+    line-height: 1;
 }
 
 .icon-twitter:before { content: "\e603"; }
