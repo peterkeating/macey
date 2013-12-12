@@ -9,7 +9,8 @@ a {
     color: $default-font-color;
     text-decoration: none;
 
-    &:hover {
+    &:hover,
+    &:focus {
         color: $brand-color;
     }
 }

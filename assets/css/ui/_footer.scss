@@ -16,7 +16,8 @@
         border-bottom: 1px solid $color-soft;
         color: $color-soft;
 
-        &:hover {
+        &:hover,
+        &:focus {
             border-bottom: 1px solid $color-light;
             color: $color-light;
         }
@@ -29,7 +30,8 @@
     margin: 0 $half-base-spacing-unit / 2;
     margin-bottom: $half-base-spacing-unit;
 
-    &:hover {
+    &:hover,
+    &:focus {
         border-bottom: 0;
     }
 }
