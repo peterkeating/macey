@@ -15,7 +15,8 @@ module.exports = function(grunt) {
      */
     var config = {
         dist: 'dist/',
-        css: 'assets/css/'
+        css: 'assets/css/',
+        zip: 'macey.zip'
     };
 
     /**
@@ -31,6 +32,20 @@ module.exports = function(grunt) {
          */
         clean: {
             dist: './<%= config.dist %>'
+        },
+
+        /**
+         * Creates a zip file containing a production ready version of the theme.
+         */
+        compress: {
+            dist: {
+                options: {
+                    archive: '<%= config.zip %>'
+                },
+                files: [
+                    { cwd: 'dist/', src: ['**'] }
+                ]
+            }
         },
 
         /**
@@ -50,6 +65,20 @@ module.exports = function(grunt) {
                     '!./**/*.md'
                 ],
                 dest: '<%= config.dist %>'
+            },
+            zip: {
+
+            }
+        },
+
+        /**
+         * Moves the zip produced by the grunt build process into the distributable
+         * directory.
+         */
+        rename: {
+            dist: {
+                src: '<%= config.zip %>',
+                dest: './<%= config.dist %>/<%= config.zip %>'
             }
         },
 
@@ -107,9 +136,11 @@ module.exports = function(grunt) {
      * Loads libraries to assist with the build process.
      */
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-rename');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['clean', 'sass:dist', 'copy']);
+    grunt.registerTask('default', ['clean', 'sass:dist', 'copy', 'compress', 'clean', 'rename']);
 };
