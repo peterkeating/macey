@@ -24,11 +24,8 @@
     }
 }
 
-.footer-social > a {
-    @include inline-block();
+.footer-social a {
     border-bottom: 0;
-    margin: 0 $half-base-spacing-unit / 2;
-    margin-bottom: $half-base-spacing-unit;
 
     &:hover,
     &:focus {
