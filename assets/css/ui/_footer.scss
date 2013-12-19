@@ -8,13 +8,13 @@
     @include box-shadow(0, 3px, 6px, 4px, $color-shadow);
 
     background-color: $color-dark;
-    color: $color-soft;
+    color: $color-white;
     margin-top: $base-spacing-unit;
     padding: $base-spacing-unit * 5 0;
 
     a {
-        border-bottom: 1px solid $color-soft;
-        color: $color-soft;
+        border-bottom: 1px solid $color-white;
+        color: $color-white;
 
         &:hover,
         &:focus {
