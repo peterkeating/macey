@@ -142,5 +142,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['clean', 'sass:dist', 'copy', 'compress', 'clean', 'rename']);
+    /**
+     * Default grunt task puts the theme in a ready for development mode.
+     */
+    grunt.registerTask('default', ['sass:dev', 'watch']);
+
+    /**
+     * Gets the theme ready for production.
+     */
+    grunt.registerTask('build', ['clean', 'sass:dist', 'copy', 'compress', 'clean', 'rename']);
 };
