@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Theme for [Ghost](https://ghost.org/) blogging platform.",
   "author": "Peter Keating",
+  "analyticsCode": "UA-XXXXX-X",
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-copy": "~0.4.1",
@@ -10,6 +11,8 @@
     "grunt-contrib-sass": "~0.5.0",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-contrib-compress": "~0.5.3",
-    "grunt-rename": "~0.1.3"
+    "grunt-rename": "~0.1.3",
+    "grunt-string-replace": "~0.2.7",
+    "grunt-contrib-htmlmin": "~0.2.0"
   }
 }

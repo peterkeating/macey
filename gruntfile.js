@@ -14,7 +14,7 @@ module.exports = function(grunt) {
      * Configuration object for the build process.
      */
     var config = {
-        dist: 'dist/',
+        dist: './dist/',
         css: 'assets/css/',
         zip: 'macey.zip'
     };
@@ -31,7 +31,7 @@ module.exports = function(grunt) {
          * Deletes artefacts from the previous build.
          */
         clean: {
-            dist: './<%= config.dist %>'
+            dist: '<%= config.dist %>'
         },
 
         /**
@@ -43,7 +43,7 @@ module.exports = function(grunt) {
                     archive: '<%= config.zip %>'
                 },
                 files: [
-                    { cwd: 'dist/', src: ['**'] }
+                    { cwd: '<%= config.dist %>', src: ['**'] }
                 ]
             }
         },
@@ -72,13 +72,27 @@ module.exports = function(grunt) {
         },
 
         /**
+         * Strips any HTML comments from the templates.
+         */
+        htmlmin: {
+            dist: {
+                options: {
+                    removeComments: true
+                },
+                files: {
+                    '<%= config.dist %>default.hbs': '<%= config.dist %>default.hbs',
+                }
+            }
+        },
+
+        /**
          * Moves the zip produced by the grunt build process into the distributable
          * directory.
          */
         rename: {
             dist: {
                 src: '<%= config.zip %>',
-                dest: './<%= config.dist %>/<%= config.zip %>'
+                dest: '<%= config.dist %>/<%= config.zip %>'
             }
         },
 
@@ -113,6 +127,28 @@ module.exports = function(grunt) {
         },
 
         /**
+         * Updates the Google Analytics code.
+         */
+        'string-replace': {
+            dist: {
+                files: {
+                    '<%= config.dist %>default.hbs': '<%= config.dist %>default.hbs'
+                },
+                options: {
+                    replacements: [
+                        /**
+                         * Updates the Google Analytics code.
+                         */
+                        {
+                            pattern: 'UA-XXXXX-X',
+                            replacement: '<%= pkg.analyticsCode %>'
+                        }
+                    ]
+                }
+            }
+        },
+
+        /**
          * Starts watching files for additions, changes or deletions, which will
          * trigger a task to be run. Current tasks are display below.
          *
@@ -138,7 +174,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-rename');
+    grunt.loadNpmTasks('grunt-string-replace');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
@@ -150,5 +188,5 @@ module.exports = function(grunt) {
     /**
      * Gets the theme ready for production.
      */
-    grunt.registerTask('build', ['clean', 'sass:dist', 'copy', 'compress', 'clean', 'rename']);
+    grunt.registerTask('build', ['clean', 'sass:dist', 'copy', 'compress', 'htmlmin:dist', 'string-replace:dist', 'clean', 'rename']);
 };
