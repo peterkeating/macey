@@ -1,0 +1,32 @@
+{{!< default}}
+
+<div class="the-post {{post_class}}">
+    {{#post}}
+
+    <h2 class="post-title">{{{title}}}</h2>
+
+    <hr />
+
+    <div class="content-body">
+        {{content}}
+    </div>
+
+    {{/post}}
+</div>
+
+<p class="text-centered"><a href="/">Return to Home</a></p>
+
+{{! Remove the line below if you don't wish to have prism code syntax highlighting. }}
+{{! Learn more about prismjs @ http://prismjs.com/ }}
+<script src="{{asset '/js/vendor/prism.js'}}"></script>
+
+{{! Using inline JavaScript to save making an additional HTTP request. }}
+<script type="text/javascript">
+
+    /**
+     * Scrolls the page to the top of the post content to avoid repeatedly showing
+     * the header to the user.
+     */
+    window.scrollTo(0, document.getElementById('the-post').offsetTop);
+
+</script>
