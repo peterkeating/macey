@@ -1,13 +1,28 @@
 /**
  * -----------------------------------------------------------------------------
- *   $HORIZONTALLIST
+ *   $LISTS
  * -----------------------------------------------------------------------------
  */
 
-.horizontal-list {
+
+.list,
+%list {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.block-list {
+    @extend %list;
+
+    > li {
+        display: block;
+        margin-bottom: $base-spacing-unit;
+    }
+}
+
+.horizontal-list {
+    @extend %list;
 
     > li {
         @include inline-block();

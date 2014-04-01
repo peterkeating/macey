@@ -27,8 +27,7 @@
  *
  * HEADER.................... Header section of the blog.
  * TEXT...................... Different ways of styling text.
- * BLOCKLIST................. List with elements stacked on top of each other.
- * HORIZONTALLIST............ List with elements stacked alongside each other.
+ * LISTS..................... Different styles for listing elements.
  * POSTS..................... Classes related to posts.
  * BODY...................... CSS used within a large body of content.
  * PAGINATION................ Paging component.
@@ -68,8 +67,7 @@
 
 @import "ui/header";
 @import "ui/text";
-@import "ui/block-list";
-@import "ui/horizontal-list";
+@import "ui/lists";
 @import "ui/posts";
 @import "ui/body";
 @import "ui/pagination";
